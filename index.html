@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البوابة الشاملة لمشروع مدار | MIDAR Space & Biometric Fintech</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> tailwind.config = { theme: { extend: { colors: { space: { 950: '#02040A', 900: '#060B18', 800: '#0D1B36', 700: '#162C54', }, cyan: { glow: '#00F0FF', neon: '#00D8F6' } }, fontFamily: { tajawal: ['Tajawal', 'sans-serif'], orbitron: ['Orbitron', 'sans-serif'], } }}} </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Tajawal', sans-serif; background-color: #02040A; color: #E2E8F0; overflow-x: hidden; }
+        .font-orbitron { font-family: 'Orbitron', sans-serif; }
+        .ambient-glow-cyan {
+            position: fixed; width: 600px; height: 600px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, rgba(2, 4, 10, 0) 70%);
+            top: -200px; right: -200px; pointer-events: none; z-index: 0;
+        }
+        .ambient-glow-blue {
+            position: fixed; width: 700px; height: 700px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(22, 44, 84, 0.35) 0%, rgba(2, 4, 10, 0) 70%);
+            bottom: -250px; left: -250px; pointer-events: none; z-index: 0;
+        }
+        .glass-card {
+            background: rgba(13, 27, 54, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 240, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .glass-card:hover {
+            border-color: rgba(0, 240, 255, 0.4);
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.15);
+        }
+        .neon-border { border: 1px solid #00F0FF; box-shadow: 0 0 15px rgba(0, 240, 255, 0.25); }
+        .neon-text-glow { text-shadow: 0 0 12px rgba(0, 240, 255, 0.6); }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #02040A; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #162C54; border-radius: 3px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #00F0FF; }
+    </style>
+</head>
+<body class="relative min-h-screen flex flex-col justify-between custom-scrollbar">
+
+    <!-- خلفيات الإضاءة التفاعلية -->
+    <div class="ambient-glow-cyan"></div>
+    <div class="ambient-glow-blue"></div>
+
+    <!-- الشريط العلوي (Navbar) -->
+    <header class="sticky top-0 z-50 glass-card border-b border-cyan-500/20 px-4 lg:px-12 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center neon-border">
+                    <i class="fa-solid fa-satellite text-space-950 text-lg"></i>
+                </div>
+                <div>
+                    <span class="font-orbitron font-extrabold text-xl text-white tracking-wider">MIDAR</span>
+                    <span class="block text-xs text-cyan-400 font-medium">مشروع مدار الفضائي والمالي</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 space-x-reverse text-sm font-medium text-slate-300">
+                <a href="#overview" class="hover:text-cyan-400 transition-colors">نظرة عامة</a>
+                <a href="#pillars" class="hover:text-cyan-400 transition-colors">ركائز المشروع</a>
+                <a href="#tech" class="hover:text-cyan-400 transition-colors">التقنيات</a>
+                <a href="#team" class="hover:text-cyan-400 transition-colors">فريق العمل</a>
+            </nav>
+            <div>
+                <button onclick="openModal('evaluationModal')" class="bg-cyan-400 hover:bg-cyan-300 text-space-950 font-bold px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-cyan-500/20 flex items-center space-x-2 space-x-reverse text-sm">
+                    <i class="fa-solid fa-star"></i>
+                    <span>بوابة التقييم</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="relative z-10 max-w-7xl mx-auto px-4 lg:px-12 py-12 flex-grow space-y-20">
+
+        <!-- القسم الرئيسي (Hero Section) -->
+        <section class="text-center space-y-6 pt-6">
+            <div class="inline-flex items-center space-x-2 space-x-reverse px-4 py-2 rounded-full glass-card text-cyan-400 text-xs font-semibold tracking-wide uppercase border border-cyan-500/30">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                <span>معرض الابتكار التقني والتجريبي - 10 نوفمبر 2026</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                مستقبل التقنية الفضائية <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 neon-text-glow font-orbitron">والمالية الحيوية</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-slate-300 text-lg leading-relaxed">
+                منظومة متكاملة تجمع بين تقنيات الفضاء المتقدمة، حماية العظام والعضلات في الجاذبية الصغرى، والحلول المالية الذكية القائمة على القياسات الحيويّة.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <a href="#pillars" class="bg-cyan-400 hover:bg-cyan-300 text-space-950 font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-cyan-500/25 flex items-center space-x-2 space-x-reverse">
+                    <span>استكشف ركائز المشروع</span>
+                    <i class="fa-solid fa-arrow-down-long"></i>
+                </a>
+                <button onclick="openModal('feedbackModal')" class="glass-card hover:bg-space-800 text-white font-semibold px-8 py-3.5 rounded-xl transition-all border border-slate-700">
+                    شاركنا رأيك
+                </button>
+            </div>
+        </section>
+
+        <!-- ركائز المشروع (Pillars Grid) -->
+        <section id="pillars" class="space-y-10">
+            <div class="text-center space-y-3">
+                <h2 class="text-2xl md:text-3xl font-bold text-white font-orbitron">ركائز النظام الستة</h2>
+                <p class="text-slate-400 text-sm">اضغط على أي ركيزة لاستعراض تفاصيلها التقنية الدقيقة</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- ركيزة 1 -->
+                <div onclick="openPillarModal('wearables')" class="glass-card p-6 rounded-2xl cursor-pointer transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-4 group-hover:bg-cyan-400 group-hover:text-space-950 transition-colors">
+                        <i class="fa-solid fa-glasses text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">النظارات الذكية والملبوسات</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">مراقبة المؤشرات الحيوية وضغط العين والجهد البدني في بيئات انعدام الجاذبية.</p>
+                </div>
+                <!-- ركيزة 2 -->
+                <div onclick="openPillarModal('banking')" class="glass-card p-6 rounded-2xl cursor-pointer transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-4 group-hover:bg-cyan-400 group-hover:text-space-950 transition-colors">
+                        <i class="fa-solid fa-vault text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">الخدمات المالية المتنبئة والكبسولة</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">محفظة فضائية مؤمنة بالكامل تعتمد على بصمة الإصبع والقياسات الحيوية للاستجابة السريعة.</p>
+                </div>
+                <!-- ركيزة 3 -->
+                <div onclick="openPillarModal('hologram')" class="glass-card p-6 rounded-2xl cursor-pointer transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-4 group-hover:bg-cyan-400 group-hover:text-space-950 transition-colors">
+                        <i class="fa-solid fa-cube text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">العروض الهولوجرامية التفاعلية</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">واجهات ثلاثية الأبعاد لعرض البيانات الحيوية الفضائية وتحليل الكثافة العظمية والعضلية للمحطة.</p>
+                </div>
+                <!-- ركيزة 4 -->
+                <div onclick="openPillarModal('kitchen')" class="glass-card p-6 rounded-2xl cursor-pointer transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-4 group-hover:bg-cyan-400 group-hover:text-space-950 transition-colors">
+                        <i class="fa-solid fa-kitchen-set text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">المطبخ الذكي والأصول المتصلة</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">ثلاجة ذكية متصلة بالمتجر تدير النواقص ذاتياً وتدفع المبالغ تلقائياً حسب الاحتياج الغذائي.</p>
+                </div>
+                <!-- ركيزة 5 -->
+                <div onclick="openPillarModal('vaults')" class="glass-card p-6 rounded-2xl cursor-pointer transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-4 group-hover:bg-cyan-400 group-hover:text-space-950 transition-colors">
+                        <i class="fa-solid fa-network-wired text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">الخزائن اللامركزية</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">حفظ وتخزين البيانات الحساسة عبر عقد فضائية لامركزية تضمن الأمان التام ضد الاختراقات.</p>
+                </div>
+                <!-- ركيزة 6 -->
+                <div onclick="openPillarModal('portal')" class="glass-card p-6 rounded-2xl cursor-pointer transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-4 group-hover:bg-cyan-400 group-hover:text-space-950 transition-colors">
+                        <i class="fa-solid fa-chart-line text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">بوابة التقييم والمراقبة</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">لوحة تحكم حية تتيح للجنة الحكام تقييم المشروع ومتابعة مؤشرات الأداء بشكل لحظي.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم فريق العمل -->
+        <section id="team" class="space-y-8 pt-10 border-t border-slate-800">
+            <div class="text-center space-y-3">
+                <h2 class="text-2xl md:text-3xl font-bold text-white font-orbitron">فريق العمل المبدع</h2>
+                <p class="text-slate-400 text-sm">نخبة من طالبات الشرقية الطموحات لابتكار مستقبل واعد</p>
+            </div>
+            <div class="flex justify-center">
+                <div class="glass-card px-8 py-6 rounded-2xl text-center space-y-2 max-w-md w-full border-cyan-500/30">
+                    <div class="w-16 h-16 bg-gradient-to-tr from-cyan-400 to-blue-600 rounded-full mx-auto flex items-center justify-center text-space-950 font-bold text-xl shadow-lg shadow-cyan-500/30">
+                        أ
+                    </div>
+                    <h3 class="text-lg font-bold text-white">ألين (قائدة الفريق)</h3>
+                    <p class="text-cyan-400 text-xs font-semibold">تنسيق المشروع وتصميم البوابة الرقمية</p>
+                    <p class="text-slate-400 text-xs pt-2">مشروع المطياف الذكي المتصل - الإصدار النهائي</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="mt-20 border-t border-slate-800 glass-card py-6 text-center text-slate-400 text-xs">
+        <p>جميع الحقوق محفوظة © مشروع مدار 2026 | تصميم وتنفيذ ألين وفريق العمل</p>
+    </footer>
+
+    <!-- نافذة منبثقة للركائز -->
+    <div id="pillarModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-space-950/80 backdrop-blur-md hidden">
+        <div class="glass-card max-w-lg w-full p-6 rounded-2xl border border-cyan-500/40 relative space-y-4">
+            <button onclick="closeModal('pillarModal')" class="absolute top-4 left-4 text-slate-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div id="pillarModalContent" class="space-y-3">
+                <!-- يتم تعبئته ديناميكياً -->
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة تقييم المشروع -->
+    <div id="evaluationModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-space-950/80 backdrop-blur-md hidden">
+        <div class="glass-card max-w-md w-full p-6 rounded-2xl border border-cyan-500/40 relative space-y-6">
+            <button onclick="closeModal('evaluationModal')" class="absolute top-4 left-4 text-slate-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="text-center space-y-2">
+                <h3 class="text-xl font-bold text-white font-orbitron">لوحة تقييم مشروع مدار</h3>
+                <p class="text-slate-400 text-xs">قيم معايير الابتكار والجاهزية الفضائية</p>
+            </div>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-xs text-slate-300 mb-1">الابتكار والتصميم الهندسي</label>
+                    <div class="flex justify-between items-center text-cyan-400 text-sm font-bold">
+                        <span>ممتاز (10/10)</span>
+                        <i class="fa-solid fa-check-circle"></i>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs text-slate-300 mb-1">الربط التقني وإنترنت الأشياء</label>
+                    <div class="flex justify-between items-center text-cyan-400 text-sm font-bold">
+                        <span>مكتمل وفعّال (10/10)</span>
+                        <i class="fa-solid fa-check-circle"></i>
+                    </div>
+                </div>
+            </div>
+            <button onclick="closeModal('evaluationModal')" class="w-full bg-cyan-400 text-space-950 font-bold py-2.5 rounded-xl hover:bg-cyan-300 transition-colors">
+                تم الاطلاع
+            </button>
+        </div>
+    </div>
+
+    <!-- نافذة الملاحظات / مشاركة الرأي -->
+    <div id="feedbackModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-space-950/80 backdrop-blur-md hidden">
+        <div class="glass-card max-w-md w-full p-6 rounded-2xl border border-cyan-500/40 relative space-y-4">
+            <button onclick="closeModal('feedbackModal')" class="absolute top-4 left-4 text-slate-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <h3 class="text-lg font-bold text-white font-orbitron">شاركنا تقييمك ورأيك</h3>
+            <form id="feedbackForm" onsubmit="submitFeedback(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs text-slate-300 mb-1">الاسم أو الجهة</label>
+                    <input type="text" required class="w-full bg-space-900 border border-slate-700 rounded-xl px-4 py-2 text-white text-sm focus:border-cyan-400 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs text-slate-300 mb-1">ملاحظاتك للمشروع</label>
+                    <textarea rows="3" required class="w-full bg-space-900 border border-slate-700 rounded-xl px-4 py-2 text-white text-sm focus:border-cyan-400 focus:outline-none" placeholder="اكتب رأيك هنا..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-cyan-400 text-space-950 font-bold py-2.5 rounded-xl hover:bg-cyan-300 transition-colors">
+                    إرسال المشاركة
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- رسالة نجاح الإرسال (Toast) -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 glass-card px-5 py-3 rounded-xl border border-cyan-400 text-white text-sm hidden shadow-2xl flex items-center space-x-3 space-x-reverse">
+        <i class="fa-solid fa-circle-check text-cyan-400 text-lg"></i>
+        <span id="toastMsg">تم بنجاح!</span>
+    </div>
+
+    <!-- السكريبت التفاعلي -->
+    <script>
+        const pillarData = {
+            wearables: {
+                title: "النظارات الذكية والملبوسات",
+                desc: "مصممة خصيصاً لرواد الفضاء لرصد التغيرات الفسيولوجية، تتبع الإجهاد البصري، وعرض بيانات الحيوية بشكل فوري دون الحاجة لشاشات خارجية."
+            },
+            banking: {
+                title: "الخدمات المالية المتنبئة والكبسولة",
+                desc: "نظام مالي مدعوم بالذكاء الاصطناعي يتنبأ بالحاجة المالية واللوجستية الطارئة، مع كبسولة أمان حيوية تعتمد على بصمة الإصبع والمعرفات الفريدة."
+            },
+            hologram: {
+                title: "العروض الهولوجرامية التفاعلية",
+                desc: "عرض مجسم ثلاثي الأبعاد لمحاكاة استشعار البذلة الفضائية وحالة العظام والعضلات تحت تأثير الجاذبية الصغرى بدقة مذهلة."
+            },
+            kitchen: {
+                title: "المطبخ الذكي والأصول المتصلة",
+                desc: "ثلاجة ذكية IoT تتواصل مباشرة مع المتجر الافتراضي، تدفع للمحتوى تلقائياً، وتدير مخزون الأغذية لمنع النقص للمحطة."
+            },
+            vaults: {
+                title: "الخزائن اللامركزية",
+                desc: "حفظ تام لبيانات المستعمرة والمالية عبر شبكة موزعة مؤمنة تشفيرياً ضد أي انقطاع اتصال مع الأرض."
+            },
+            portal: {
+                title: "بوابة التقييم والمراقبة",
+                desc: "الواجهة المركزية للمشروع التي تتيح للزوار والحكام استعراض المقاييس، تفقد الأداء، ومسح الباركود للوصول الفوري."
+            }
+        };
+
+        function openPillarModal(pillarKey) {
+            const data = pillarData[pillarKey];
+            if(!data) return;
+            const content = document.getElementById('pillarModalContent');
+            content.innerHTML = `
+                <h3 class="text-xl font-bold text-cyan-400 font-orbitron">${data.title}</h3>
+                <p class="text-slate-300 text-sm leading-relaxed pt-2">${data.desc}</p>
+                <div class="pt-4 flex justify-end">
+                    <span class="text-xs text-cyan-500 font-semibold bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">مشروع مدار الفضائي</span>
+                </div>
+            `;
+            openModal('pillarModal');
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+        }
+
+        function submitFeedback(e) {
+            e.preventDefault();
+            closeModal('feedbackModal');
+            showToast('شكراً لك! تم استلام تقييمك بنجاح لدعم مشروع مدار');
+            document.getElementById('feedbackForm').reset();
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
