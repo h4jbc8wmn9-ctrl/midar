@@ -256,123 +256,128 @@
     </div>
 </section>
 
-    <!-- قسم تخطيط الواجهات المصمم برمجياً بنفس الشريحة -->
-<section class="py-16 relative border-t border-cyan-400/20">
-    <div class="max-w-4xl mx-auto px-4 space-y-8">
+    <<!-- زر فتح واجهة المستخدم التفاعلية -->
+<div class="text-center py-12">
+    <button onclick="openModal('uiModal')" class="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-600 text-gray-950 font-bold rounded-2xl shadow-lg shadow-cyan-400/30 hover:opacity-90 transition-all text-center inline-flex items-center gap-3 text-lg font-orbitron">
+        <i class="fa-solid fa-mobile-screen-button text-xl"></i>
+        استعراض واجهة المستخدم الرقمية (تطبيق بنك مدار)
+    </button>
+</div>
+
+<!-- النافذة المنبثقة (Modal) وتحتوي على واجهة التطبيق كاملة -->
+<div id="uiModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md hidden">
+    <div class="glass-card max-w-xl w-full p-6 rounded-3xl border border-cyan-500/40 relative max-h-[95vh] overflow-y-auto dir-rtl shadow-2xl">
         
-        <!-- عنوان القسم الرئيسي -->
-        <div class="text-center space-y-2">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-white font-orbitron tracking-wide">تخطيط الواجهات</h2>
-            <p class="text-cyan-400 text-base md:text-lg font-medium">واجهة المستخدم الرقمية (تطبيق بنك مدار)</p>
-        </div>
-
-        <!-- محاكي شاشة الهاتف (تطبيق بنك مدار) -->
-        <div class="bg-gray-950 border-2 border-cyan-500/40 rounded-3xl p-6 md:p-8 shadow-2xl shadow-cyan-500/10 relative max-w-md mx-auto space-y-6 dir-rtl">
+        <!-- زر إغلاق النافذة -->
+        <button onclick="closeModal('uiModal')" class="absolute top-4 left-4 text-slate-400 hover:text-white transition-colors bg-gray-800/90 w-10 h-10 rounded-full flex items-center justify-center border border-slate-700 z-10">
+            <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+        
+        <!-- محتوى واجهة التطبيق البرمجية داخل النافذة -->
+        <div class="space-y-6 pt-2">
             
-            <!-- هيدر التطبيق (الشعار وهوية بيولوجية) -->
-            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-                <div class="bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-full flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span class="text-emerald-400 text-xs font-semibold">هوية بيولوجية نشطة</span>
-                </div>
-                <div class="text-left">
-                    <h3 class="text-white font-bold font-orbitron text-lg tracking-wider">مَدَار</h3>
-                    <p class="text-[10px] text-cyan-400">MIDAR FUTURE BANK</p>
-                </div>
+            <div class="text-center space-y-1">
+                <h3 class="text-xl font-bold text-white font-orbitron">تخطيط واجهات تطبيق بنك مدار</h3>
+                <p class="text-cyan-400 text-xs">واجهة المستخدم البيولوجية والرقمية التفاعلية</p>
             </div>
 
-            <!-- رسالة الترحيب واسم الطالبة وقائدة الفريق -->
-            <div class="bg-gray-900/80 border border-cyan-500/20 rounded-2xl p-4 flex items-center justify-between">
-                <div class="space-y-1">
-                    <p class="text-xs text-slate-400 flex items-center gap-1">أهلاً بك مجدداً <span class="text-amber-400">✨</span></p>
-                    <p class="text-white font-bold text-sm md:text-base">الطالبة: ألين عسيري</p>
-                </div>
-                <span class="bg-cyan-500/20 text-cyan-300 text-xs px-3 py-1 rounded-lg border border-cyan-500/30 font-medium">حساب قائدة</span>
-            </div>
-
-            <!-- بطاقة الرصيد والأصول الكريستالية -->
-            <div class="bg-gradient-to-br from-gray-900 to-gray-900/90 border border-cyan-500/30 rounded-2xl p-5 space-y-4 shadow-inner">
-                <div class="flex items-center justify-between text-xs text-slate-300">
-                    <span class="flex items-center gap-1.5 text-cyan-400">
-                        <i class="fa-solid fa-atom"></i> العرض الهولوجرامي المالي
-                    </span>
-                    <span class="bg-cyan-950 px-2 py-0.5 rounded text-[10px] text-cyan-300 border border-cyan-500/20">مزامنة فلكية 100%</span>
+            <!-- محاكي شاشة الهاتف -->
+            <div class="bg-gray-950 border-2 border-cyan-500/40 rounded-3xl p-5 md:p-6 shadow-2xl relative space-y-5">
+                
+                <!-- هيدر التطبيق -->
+                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                    <div class="bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-0.5 rounded-full flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="text-emerald-400 text-[11px] font-semibold">هوية بيولوجية نشطة</span>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="text-white font-bold font-orbitron text-base tracking-wider">مَدَار</h4>
+                        <p class="text-[9px] text-cyan-400">MIDAR FUTURE BANK</p>
+                    </div>
                 </div>
 
-                <div class="space-y-1">
-                    <p class="text-xs text-slate-400">الرصيد المتاح (الكاش الكريستالي):</p>
-                    <p class="text-2xl md:text-3xl font-extrabold text-white font-orbitron text-cyan-300 tracking-tight">
-                        1,450,800 <span class="text-sm font-normal text-slate-400">M-CR (مكعبات طاقة)</span>
+                <!-- ترحيب واسم القائدة -->
+                <div class="bg-gray-900/80 border border-cyan-500/20 rounded-2xl p-3.5 flex items-center justify-between">
+                    <div class="space-y-0.5">
+                        <p class="text-[11px] text-slate-400 flex items-center gap-1">أهلاً بك مجدداً <span class="text-amber-400">✨</span></p>
+                        <p class="text-white font-bold text-sm">الطالبة: ألين عسيري</p>
+                    </div>
+                    <span class="bg-cyan-500/20 text-cyan-300 text-[11px] px-2.5 py-1 rounded-lg border border-cyan-500/30 font-medium">حساب قائدة</span>
+                </div>
+
+                <!-- الرصيد والأصول -->
+                <div class="bg-gradient-to-br from-gray-900 to-gray-900/90 border border-cyan-500/30 rounded-2xl p-4 space-y-3">
+                    <div class="flex items-center justify-between text-[11px] text-slate-300">
+                        <span class="flex items-center gap-1 text-cyan-400">
+                            <i class="fa-solid fa-atom"></i> العرض الهولوجرامي المالي
+                        </span>
+                        <span class="bg-cyan-950 px-2 py-0.5 rounded text-[10px] text-cyan-300 border border-cyan-500/20">مزامنة فلكية 100%</span>
+                    </div>
+
+                    <div class="space-y-0.5">
+                        <p class="text-[11px] text-slate-400">الرصيد المتاح (الكاش الكريستالي):</p>
+                        <p class="text-2xl font-extrabold text-white font-orbitron text-cyan-300">
+                            1,450,800 <span class="text-xs font-normal text-slate-400">M-CR</span>
+                        </p>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-2 border-t border-slate-800/80 text-[11px]">
+                        <span class="text-slate-300 flex items-center gap-1">
+                            <i class="fa-solid fa-shield-halved text-cyan-400"></i> الخزائن السحابية: محمية ذرياً
+                        </span>
+                        <span class="text-cyan-400">عرض الأبعاد 3D &gt;</span>
+                    </div>
+                </div>
+
+                <!-- مستشار المشاعر -->
+                <div class="bg-gray-900/80 border border-cyan-500/20 rounded-2xl p-3.5 space-y-2.5">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] text-rose-400 flex items-center gap-1 font-semibold">
+                            <i class="fa-solid fa-heart-pulse"></i> مستشار المشاعر والحالة الحيوية
+                        </span>
+                        <span class="bg-rose-950/60 text-rose-300 text-[10px] px-2 py-0.5 rounded border border-rose-500/20">مستقر</span>
+                    </div>
+                    <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-emerald-400 to-cyan-400 h-full w-[94%] rounded-full"></div>
+                    </div>
+                    <p class="text-[10px] text-slate-300 leading-relaxed">
+                        مؤشرات الاتزان مرتفعة. البنك في حالة استعداد كامل لتنفيذ المعاملات بزمن انتظار صفر.
                     </p>
                 </div>
 
-                <div class="flex items-center justify-between pt-2 border-t border-slate-800/80 text-xs">
-                    <span class="text-slate-300 flex items-center gap-1.5">
-                        <i class="fa-solid fa-shield-halved text-cyan-400"></i> الخزائن السحابية: محمية ذرياً
-                    </span>
-                    <span class="text-cyan-400 hover:underline cursor-pointer">عرض الأبعاد 3D &gt;</span>
-                </div>
-            </div>
-
-            <!-- مستشار المشاعر والحالة الحيوية -->
-            <div class="bg-gray-900/80 border border-cyan-500/20 rounded-2xl p-4 space-y-3">
-                <div class="flex items-center justify-between">
-                    <span class="text-xs text-rose-400 flex items-center gap-1.5 font-semibold">
-                        <i class="fa-solid fa-heart-pulse"></i> مستشار المشاعر والحالة الحيوية
-                    </span>
-                    <span class="bg-rose-950/60 text-rose-300 text-[10px] px-2 py-0.5 rounded border border-rose-500/20">مستقر (نفسي وحيوي)</span>
-                </div>
-                <!-- شريط مؤشر الاتزان -->
-                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                    <div class="bg-gradient-to-r from-emerald-400 to-cyan-400 h-full w-[94%] rounded-full"></div>
-                </div>
-                <p class="text-[11px] text-slate-300 leading-relaxed">
-                    مؤشرات الاتزان مرتفعة. البنك في حالة استعداد كامل لتنفيذ المعاملات فوراً بزمن انتظار صفر.
-                </p>
-            </div>
-
-            <!-- الخدمات المصرفية المبرمجة (الأزرار الثلاثة السريعة) -->
-            <div class="space-y-2">
-                <p class="text-xs text-slate-400 font-medium">الخدمات المصرفية المبرمجة:</p>
-                <div class="grid grid-cols-3 gap-2 text-center">
-                    <div class="bg-gray-900 border border-cyan-500/20 hover:border-cyan-400/50 p-3 rounded-xl transition-all space-y-1">
-                        <i class="fa-solid fa-network-wired text-cyan-400 text-base"></i>
-                        <p class="text-[11px] text-white font-medium">التوأم الرقمي</p>
-                    </div>
-                    <div class="bg-gray-900 border border-cyan-500/20 hover:border-cyan-400/50 p-3 rounded-xl transition-all space-y-1">
-                        <i class="fa-solid fa-code text-cyan-400 text-base"></i>
-                        <p class="text-[11px] text-white font-medium">أموال مبرمجة</p>
-                    </div>
-                    <div class="bg-gray-900 border border-cyan-500/20 hover:border-cyan-400/50 p-3 rounded-xl transition-all space-y-1">
-                        <i class="fa-solid fa-file-contract text-cyan-400 text-base"></i>
-                        <p class="text-[11px] text-white font-medium">العقود الذكية</p>
+                <!-- الخدمات المصرفية المبرمجة -->
+                <div class="space-y-1.5">
+                    <p class="text-[11px] text-slate-400 font-medium">الخدمات المصرفية المبرمجة:</p>
+                    <div class="grid grid-cols-3 gap-2 text-center">
+                        <div class="bg-gray-900 border border-cyan-500/20 p-2.5 rounded-xl space-y-1">
+                            <i class="fa-solid fa-network-wired text-cyan-400 text-sm"></i>
+                            <p class="text-[10px] text-white font-medium">التوأم الرقمي</p>
+                        </div>
+                        <div class="bg-gray-900 border border-cyan-500/20 p-2.5 rounded-xl space-y-1">
+                            <i class="fa-solid fa-code text-cyan-400 text-sm"></i>
+                            <p class="text-[10px] text-white font-medium">أموال مبرمجة</p>
+                        </div>
+                        <div class="bg-gray-900 border border-cyan-500/20 p-2.5 rounded-xl space-y-1">
+                            <i class="fa-solid fa-file-contract text-cyan-400 text-sm"></i>
+                            <p class="text-[10px] text-white font-medium">العقود الذكية</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- شريط التنقل السفلي للتطبيق -->
-            <div class="bg-gray-900/90 border border-slate-800 rounded-xl p-2.5 flex items-center justify-around text-center text-slate-400 text-[10px]">
-                <div class="space-y-0.5">
-                    <i class="fa-solid fa-gear block text-sm"></i>
-                    <span>الإعدادات</span>
+                <!-- شريط التنقل السفلي -->
+                <div class="bg-gray-900/90 border border-slate-800 rounded-xl p-2 flex items-center justify-around text-center text-slate-400 text-[9px]">
+                    <div><i class="fa-solid fa-gear block text-xs"></i>الإعدادات</div>
+                    <div><i class="fa-solid fa-wallet block text-xs"></i>الجواز المالي</div>
+                    <div><i class="fa-solid fa-globe block text-xs"></i>إنترنت الأشياء</div>
+                    <div class="text-cyan-400 font-bold"><i class="fa-solid fa-house block text-xs"></i>الرئيسية</div>
                 </div>
-                <div class="space-y-0.5">
-                    <i class="fa-solid fa-wallet block text-sm"></i>
-                    <span>الجواز المالي</span>
-                </div>
-                <div class="space-y-0.5">
-                    <i class="fa-solid fa-globe block text-sm"></i>
-                    <span>إنترنت الأشياء</span>
-                </div>
-                <div class="space-y-0.5 text-cyan-400">
-                    <i class="fa-solid fa-house block text-sm"></i>
-                    <span class="font-bold">الرئيسية</span>
-                </div>
-            </div>
 
+            </div>
+            
         </div>
     </div>
-</section>
+</div>
+
 
     <!-- زر فتح واجهة المستخدم التفاعلية -->
 <div class="text-center py-10">
