@@ -255,37 +255,24 @@
         </div>
     </div>
 </section>
-
-<!-- قسم استعراض الواجهة (زر واحد أنيق فقط) -->
-<section class="py-12 relative border-t border-cyan-400/20">
-    <div class="text-center">
-        <button onclick="openModal('uiModal')" class="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-600 text-gray-950 font-bold rounded-2xl shadow-lg shadow-cyan-400/30 hover:opacity-90 transition-all text-center inline-flex items-center gap-3 text-lg font-orbitron">
-            <i class="fa-solid fa-mobile-screen-button text-xl"></i>
-            استعراض واجهة المستخدم الرقمية (تطبيق بنك مدار)
-        </button>
-    </div>
+<section class="py-12 relative border-t border-cyan-400/20 text-center">
+    <button onclick="openModal('uiModal')" class="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-600 text-gray-950 font-bold rounded-2xl shadow-lg shadow-cyan-400/30 hover:opacity-90 transition-all inline-flex items-center gap-3 text-lg font-orbitron">
+        <i class="fa-solid fa-mobile-screen-button text-xl"></i>
+        استعراض واجهة المستخدم الرقمية (تطبيق بنك مدار)
+    </button>
 </section>
 
-<!-- النافذة المنبثقة التفاعلية (تحتوي على تصميم الواجهة المبرمج كاملاً) -->
 <div id="uiModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md hidden">
     <div class="glass-card max-w-xl w-full p-6 rounded-3xl border border-cyan-500/40 relative max-h-[95vh] overflow-y-auto dir-rtl shadow-2xl">
-        
-        <!-- زر إغلاق النافذة -->
         <button onclick="closeModal('uiModal')" class="absolute top-4 left-4 text-slate-400 hover:text-white transition-colors bg-gray-800/90 w-10 h-10 rounded-full flex items-center justify-center border border-slate-700 z-10">
             <i class="fa-solid fa-xmark text-xl"></i>
         </button>
-        
-        <!-- محتوى واجهة التطبيق داخل النافذة -->
         <div class="space-y-6 pt-2">
             <div class="text-center space-y-1">
                 <h3 class="text-xl font-bold text-white font-orbitron">تخطيط واجهات تطبيق بنك مدار</h3>
                 <p class="text-cyan-400 text-xs">واجهة المستخدم البيولوجية والرقمية التفاعلية</p>
             </div>
-
-            <!-- محاكي شاشة الهاتف -->
             <div class="bg-gray-950 border-2 border-cyan-500/40 rounded-3xl p-5 md:p-6 shadow-2xl relative space-y-5">
-                
-                <!-- هيدر التطبيق -->
                 <div class="flex items-center justify-between border-b border-slate-800 pb-3">
                     <div class="bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-0.5 rounded-full flex items-center gap-1.5">
                         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -296,8 +283,6 @@
                         <p class="text-[9px] text-cyan-400">MIDAR FUTURE BANK</p>
                     </div>
                 </div>
-
-                <!-- ترحيب واسم القائدة -->
                 <div class="bg-gray-900/80 border border-cyan-500/20 rounded-2xl p-3.5 flex items-center justify-between">
                     <div class="space-y-0.5">
                         <p class="text-[11px] text-slate-400 flex items-center gap-1">أهلاً بك مجدداً <span class="text-amber-400">✨</span></p>
@@ -305,48 +290,30 @@
                     </div>
                     <span class="bg-cyan-500/20 text-cyan-300 text-[11px] px-2.5 py-1 rounded-lg border border-cyan-500/30 font-medium">حساب قائدة</span>
                 </div>
-
-                <!-- الرصيد والأصول الكريستالية -->
                 <div class="bg-gradient-to-br from-gray-900 to-gray-900/90 border border-cyan-500/30 rounded-2xl p-4 space-y-3">
                     <div class="flex items-center justify-between text-[11px] text-slate-300">
-                        <span class="flex items-center gap-1 text-cyan-400">
-                            <i class="fa-solid fa-atom"></i> العرض الهولوجرامي المالي
-                        </span>
+                        <span class="flex items-center gap-1 text-cyan-400"><i class="fa-solid fa-atom"></i> العرض الهولوجرامي المالي</span>
                         <span class="bg-cyan-950 px-2 py-0.5 rounded text-[10px] text-cyan-300 border border-cyan-500/20">مزامنة فلكية 100%</span>
                     </div>
-
                     <div class="space-y-0.5">
                         <p class="text-[11px] text-slate-400">الرصيد المتاح (الكاش الكريستالي):</p>
-                        <p class="text-2xl font-extrabold text-white font-orbitron text-cyan-300">
-                            1,450,800 <span class="text-xs font-normal text-slate-400">M-CR</span>
-                        </p>
+                        <p class="text-2xl font-extrabold text-white font-orbitron text-cyan-300">1,450,800 <span class="text-xs font-normal text-slate-400">M-CR</span></p>
                     </div>
-
                     <div class="flex items-center justify-between pt-2 border-t border-slate-800/80 text-[11px]">
-                        <span class="text-slate-300 flex items-center gap-1">
-                            <i class="fa-solid fa-shield-halved text-cyan-400"></i> الخزائن السحابية: محمية ذرياً
-                        </span>
+                        <span class="text-slate-300 flex items-center gap-1"><i class="fa-solid fa-shield-halved text-cyan-400"></i> الخزائن السحابية: محمية ذرياً</span>
                         <span class="text-cyan-400">عرض الأبعاد 3D &gt;</span>
                     </div>
                 </div>
-
-                <!-- مستشار المشاعر -->
                 <div class="bg-gray-900/80 border border-cyan-500/20 rounded-2xl p-3.5 space-y-2.5">
                     <div class="flex items-center justify-between">
-                        <span class="text-[11px] text-rose-400 flex items-center gap-1 font-semibold">
-                            <i class="fa-solid fa-heart-pulse"></i> مستشار المشاعر والحالة الحيوية
-                        </span>
+                        <span class="text-[11px] text-rose-400 flex items-center gap-1 font-semibold"><i class="fa-solid fa-heart-pulse"></i> مستشار المشاعر والحالة الحيوية</span>
                         <span class="bg-rose-950/60 text-rose-300 text-[10px] px-2 py-0.5 rounded border border-rose-500/20">مستقر</span>
                     </div>
                     <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
                         <div class="bg-gradient-to-r from-emerald-400 to-cyan-400 h-full w-[94%] rounded-full"></div>
                     </div>
-                    <p class="text-[10px] text-slate-300 leading-relaxed">
-                        مؤشرات الاتزان مرتفعة. البنك في حالة استعداد كامل لتنفيذ المعاملات بزمن انتظار صفر.
-                    </p>
+                    <p class="text-[10px] text-slate-300 leading-relaxed">مؤشرات الاتزان مرتفعة. البنك في حالة استعداد كامل لتنفيذ المعاملات بزمن انتظار صفر.</p>
                 </div>
-
-                <!-- الخدمات المصرفية المبرمجة -->
                 <div class="space-y-1.5">
                     <p class="text-[11px] text-slate-400 font-medium">الخدمات المصرفية المبرمجة:</p>
                     <div class="grid grid-cols-3 gap-2 text-center">
@@ -364,92 +331,17 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- شريط التنقل السفلي -->
                 <div class="bg-gray-900/90 border border-slate-800 rounded-xl p-2 flex items-center justify-around text-center text-slate-400 text-[9px]">
                     <div><i class="fa-solid fa-gear block text-xs"></i>الإعدادات</div>
                     <div><i class="fa-solid fa-wallet block text-xs"></i>الجواز المالي</div>
                     <div><i class="fa-solid fa-globe block text-xs"></i>إنترنت الأشياء</div>
                     <div class="text-cyan-400 font-bold"><i class="fa-solid fa-house block text-xs"></i>الرئيسية</div>
                 </div>
-
-            </div>
-            
-        </div>
-    </div>
-</div>
-
-
-
-    <!-- زر فتح واجهة المستخدم التفاعلية -->
-<div class="text-center py-10">
-    <button onclick="openModal('uiModal')" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-gray-950 font-bold rounded-xl shadow-lg shadow-cyan-400/30 hover:opacity-90 transition-all text-center inline-flex items-center gap-3">
-        <i class="fa-solid fa-mobile-screen-button text-xl"></i>
-        استعراض واجهة المستخدم الرقمية (تطبيق بنك مدار)
-    </button>
-</div>
-
-<!-- النافذة المنبثقة (Modal) للواجهة -->
-<div id="uiModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
-    <div class="glass-card max-w-4xl w-full p-6 rounded-2xl border border-cyan-500/40 relative max-h-[90vh] overflow-y-auto dir-rtl">
-        <button onclick="closeModal('uiModal')" class="absolute top-4 left-4 text-slate-400 hover:text-white transition-colors bg-gray-800/80 p-2 rounded-full">
-            <i class="fa-solid fa-xmark text-xl"></i>
-        </button>
-        
-        <div class="space-y-6">
-            <div class="text-center space-y-2">
-                <h3 class="text-2xl font-bold text-white font-orbitron">تخطيط واجهات تطبيق بنك مدار</h3>
-                <p class="text-cyan-400 text-sm">استعراض تفاعلي لواجهة المستخدم البيولوجية والرقمية</p>
-            </div>
-            
-            <!-- صورة الواجهة -->
-            <div class="bg-gray-950 p-3 rounded-xl border border-cyan-500/30 text-center">
-                <img src="ui-preview.png" alt="واجهة تطبيق بنك مدار" class="max-h-[50vh] mx-auto rounded-lg shadow-lg object-contain">
-            </div>
-
-            <!-- الشروحات الخاصة بالواجهة -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-right">
-                <div class="bg-gray-900/60 p-4 rounded-xl border border-cyan-400/20">
-                    <h4 class="text-cyan-400 font-bold mb-1">شاشة الحساب والتحقق البيولوجي:</h4>
-                    <p class="text-slate-300 text-xs leading-relaxed">تعرض حالة الأمان البيولوجي النشطة واسم العميل مع تفعيل الحساب الفوري.</p>
-                </div>
-                <div class="bg-gray-900/60 p-4 rounded-xl border border-cyan-400/20">
-                    <h4 class="text-cyan-400 font-bold mb-1">الأرصدة والأصول الكريستالية:</h4>
-                    <p class="text-slate-300 text-xs leading-relaxed">عرض الرصيد المتاح من مكعبات الطاقة ومؤشرات الخزائن السحابية المحمية ذرياً.</p>
-                </div>
-                <div class="bg-gray-900/60 p-4 rounded-xl border border-cyan-400/20">
-                    <h4 class="text-cyan-400 font-bold mb-1">مستشار المشاعر والحالة الحيوية:</h4>
-                    <p class="text-slate-300 text-xs leading-relaxed">مراقبة مؤشرات الاتزان النفسي للعميل لضمان تنفيذ المعاملات بزمن انتظار صفر.</p>
-                </div>
-                <div class="bg-gray-900/60 p-4 rounded-xl border border-cyan-400/20">
-                    <h4 class="text-cyan-400 font-bold mb-1">الخدمات المصرفية المبرمجة:</h4>
-                    <p class="text-slate-300 text-xs leading-relaxed">أزرار تفاعلية سريعة للوصول إلى التوأم الرقمي، الأموال المبرمجة، والعقود الذكية.</p>
-                </div>
             </div>
         </div>
     </div>
 </div>
 
-    <!-- الفوتر -->
-    <!-- قسم حقوق الفريق وأسمائه في الفوتر -->
-<footer class="mt-20 border-t border-slate-800 glass-card py-8 text-center text-slate-400">
-    <div class="max-w-7xl mx-auto px-4 space-y-4">
-        <!-- أسماء الفريق والقيادة -->
-        <div class="space-y-2">
-            <p class="text-cyan-400 font-bold text-base">
-                <span class="text-white">قائدة الفريق:</span> ألين عسيري
-            </p>
-            <p class="text-slate-300 text-sm leading-relaxed">
-                <span class="text-cyan-400 font-semibold">أعضاء الفريق:</span> جنى المطيري • العنود الخالدي • ريناد العتيبي • وتين القحطاني • سحر متنبك • ألماس الشراري • جمانة الخالدي • نوف الرشيدي • فاطمة محمد
-            </p>
-        </div>
-        
-        <!-- حقوق المشروع -->
-        <p class="text-xs text-slate-500 pt-2 border-t border-slate-800/60">
-            جميع الحقوق محفوظة © مشروع مدار 2026 | تصميم وتنفذ ألين وفريق العمل
-        </p>
-    </div>
-</footer>
 
 
     <!-- نافذة منبثقة للركائز -->
