@@ -256,6 +256,55 @@
     </div>
 </section>
 
+    <!-- زر فتح واجهة المستخدم التفاعلية -->
+<div class="text-center py-10">
+    <button onclick="openModal('uiModal')" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-gray-950 font-bold rounded-xl shadow-lg shadow-cyan-400/30 hover:opacity-90 transition-all text-center inline-flex items-center gap-3">
+        <i class="fa-solid fa-mobile-screen-button text-xl"></i>
+        استعراض واجهة المستخدم الرقمية (تطبيق بنك مدار)
+    </button>
+</div>
+
+<!-- النافذة المنبثقة (Modal) للواجهة -->
+<div id="uiModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
+    <div class="glass-card max-w-4xl w-full p-6 rounded-2xl border border-cyan-500/40 relative max-h-[90vh] overflow-y-auto dir-rtl">
+        <button onclick="closeModal('uiModal')" class="absolute top-4 left-4 text-slate-400 hover:text-white transition-colors bg-gray-800/80 p-2 rounded-full">
+            <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+        
+        <div class="space-y-6">
+            <div class="text-center space-y-2">
+                <h3 class="text-2xl font-bold text-white font-orbitron">تخطيط واجهات تطبيق بنك مدار</h3>
+                <p class="text-cyan-400 text-sm">استعراض تفاعلي لواجهة المستخدم البيولوجية والرقمية</p>
+            </div>
+            
+            <!-- صورة الواجهة -->
+            <div class="bg-gray-950 p-3 rounded-xl border border-cyan-500/30 text-center">
+                <img src="ui-preview.png" alt="واجهة تطبيق بنك مدار" class="max-h-[50vh] mx-auto rounded-lg shadow-lg object-contain">
+            </div>
+
+            <!-- الشروحات الخاصة بالواجهة -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-right">
+                <div class="bg-gray-900/60 p-4 rounded-xl border border-cyan-400/20">
+                    <h4 class="text-cyan-400 font-bold mb-1">شاشة الحساب والتحقق البيولوجي:</h4>
+                    <p class="text-slate-300 text-xs leading-relaxed">تعرض حالة الأمان البيولوجي النشطة واسم العميل مع تفعيل الحساب الفوري.</p>
+                </div>
+                <div class="bg-gray-900/60 p-4 rounded-xl border border-cyan-400/20">
+                    <h4 class="text-cyan-400 font-bold mb-1">الأرصدة والأصول الكريستالية:</h4>
+                    <p class="text-slate-300 text-xs leading-relaxed">عرض الرصيد المتاح من مكعبات الطاقة ومؤشرات الخزائن السحابية المحمية ذرياً.</p>
+                </div>
+                <div class="bg-gray-900/60 p-4 rounded-xl border border-cyan-400/20">
+                    <h4 class="text-cyan-400 font-bold mb-1">مستشار المشاعر والحالة الحيوية:</h4>
+                    <p class="text-slate-300 text-xs leading-relaxed">مراقبة مؤشرات الاتزان النفسي للعميل لضمان تنفيذ المعاملات بزمن انتظار صفر.</p>
+                </div>
+                <div class="bg-gray-900/60 p-4 rounded-xl border border-cyan-400/20">
+                    <h4 class="text-cyan-400 font-bold mb-1">الخدمات المصرفية المبرمجة:</h4>
+                    <p class="text-slate-300 text-xs leading-relaxed">أزرار تفاعلية سريعة للوصول إلى التوأم الرقمي، الأموال المبرمجة، والعقود الذكية.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
     <!-- الفوتر -->
     <!-- قسم حقوق الفريق وأسمائه في الفوتر -->
 <footer class="mt-20 border-t border-slate-800 glass-card py-8 text-center text-slate-400">
