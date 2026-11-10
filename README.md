@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+٫<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -148,10 +148,12 @@
 
         <!-- Quick Action Links -->
         <div class="flex items-center space-x-3 space-x-reverse">
-            <button onclick="openModal('https://docs.google.com/forms/d/e/1FAIpQLSdgG47sWzhxxwDQ6fVb0FGin_vFktz4S9xz7PuIRPekMPoN-Q/viewform?usp=header')" class="px-4 py-2 rounded-xl bg-cyan-500/10 border border-cyan-500/40 text-cyan-glow hover:bg-cyan-500 hover:text-black font-bold text-xs sm:text-sm transition-all flex items-center gap-2 shadow-[0_0_15px_rgba(0,240,255,0.15)]">
-                <i class="fa-solid fa-star-half-stroke"></i>
-                <span>تقييم تجربة العرض</span>
-            </button>
+       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgG47sWzhxxwDQ6fVb0FGin_vFktz4S9xz7PuIRPekMPoN-Q/viewform?usp=header" target="_blank" class="px-4 py-2 rounded-xl bg-cyan-500/10 border border-cyan-500/40 text-cyan-glow hover:bg-cyan-500 hover:text-black font-bold text-xs sm:text-sm transition-all flex items-center gap-2 shadow-[0_0_15px_rgba(0,240,255,0.15)]"><i class="fa-solid fa-star-half-stroke"></i><span>تقييم تجربة العرض</span></a>
+
+        <i class="fa-solid fa-star-half-stroke"></i>
+        <span>تقييم تجربة العرض</span>
+    </a>
+
         </div>
     </div>
 </header>
